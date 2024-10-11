@@ -1,0 +1,16 @@
+def print_armstrong_numbers_in_range(A, B):
+    for i in range(A,B+1):
+        temp=i
+        count=0
+        while temp>0:
+            count=count+1
+            temp=temp//10
+        temp=i
+        sum=0
+
+        while temp>0:
+            last_dig=temp%10
+            sum=sum+(last_dig**count)
+            temp=temp//10
+        if sum==i:
+            print(i,end=' ')
